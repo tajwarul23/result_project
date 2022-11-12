@@ -182,7 +182,7 @@ void update(){
 
 		if(e[i].id==id){
 
-		cout<<"Old data of employee "<<i+1<<endl;
+		cout<<"Old data of Student "<<i+1<<endl;
 
 		cout<<"Name: "<<e[i].name<<endl;
 
@@ -198,9 +198,15 @@ void update(){
 
         cout<<"Grade: "<<e[i].grade<<endl;
 
+        cout<<"Total: "<<e[i].sum<<endl;
+
+        cout<<"Percentage: "<<e[i].avg<<"%"<<endl;
+
+        cout<<"Result: "<<e[i].result<<endl;
+
 		cout<<"\nEnter new data"<<endl;
 
-		cout<<"Enter employee name: ";
+		cout<<"Enter Student name: ";
 
 		cin>>e[i].name;
 
@@ -226,7 +232,10 @@ void update(){
 		cout<<"Enter Marks of cse_103: ";
 
 		cin>>e[i].CSE_103;
-
+        int newSum=e[i].CSE_101+e[i].CSE_102+e[i].CSE_103;
+        e[i].sum=newSum;
+		float newAvg=e[i].sum/3;
+		e[i].avg=newAvg;
 		break;
 
 		}
@@ -383,7 +392,7 @@ main(){
 
 	cout<<"\t\tEnter username: ";
 
-	getline(cin,usrn);
+	cin>>usrn;
 
 	cout<<"\t\tEnter password: ";
 
